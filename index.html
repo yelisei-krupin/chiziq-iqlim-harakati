@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iqlim Harakati | Bizning Jamiyatga Qo'shiling</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Asosiy konteyner, 2000s dizayniga mos markazlashtirilgan -->
+    <center>
+        <table class="main_table" cellspacing="0" cellpadding="0">
+            <!-- Header qismi -->
+            <tr>
+                <td class="header" colspan="2">
+                    <div class="logo_area">
+                        <span class="logo_text">IQLIM</span>
+                        <span class="Slogan_text">Harakat. O'zgarish. Kelajak.</span>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <!-- Chap ustun (Sidebar) -->
+                <td class="sidebar">
+                    <div class="menu_box">
+                        <div class="menu_header">Navigatsiya</div>
+                        <ul>
+                            <li><a href="#haqimizda">Bosh sahifa</a></li>
+                            <li><a href="#muammo">Muammo</a></li>
+                            <li><a href="#biz_kimiz">Biz kimmiz?</a></li>
+                            <li><a href="#qoshilish" class="active">** Qo'shilish **</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="stats_box">
+                        <div class="menu_header">Jamiyat Hisoblagichi</div>
+                        <div class="stat_number">1,245</div>
+                        <div class="stat_label">Faol a'zo</div>
+                    </div>
+                </td>
+
+                <!-- O'rta ustun (Content) -->
+                <td class="content">
+                    
+                    <!-- Xush kelibsiz qismi -->
+                    <div class="post_box" id="haqimizda">
+                        <div class="post_header">Xush Kelibsiz!</div>
+                        <div class="post_content">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1146/1146869.png" alt="Iqlim" align="left" width="50" style="margin-right: 10px;">
+                            <b>Sayyoramiz xavf ostida.</b> Iqlim o'zgarishi haqiqat va u har birimizga ta'sir qilmoqda. Biz shunchaki gapiradigan odamlar emasmiz, biz harakat qiluvchi jamiyatmiz.
+                            <br><br>
+                            O'zingizni chetda kuzatuvchi hisoblamang. Kelajagimiz uchun kurashda bizning jamoamizga qo'shiling.
+                        </div>
+                    </div>
+
+                    <!-- Muammo qismi -->
+                    <div class="post_box" id="muammo">
+                        <div class="post_header">Nima uchun kurashyapmiz?</div>
+                        <div class="post_content">
+                            Global isish, muzliklarning erishi, ekstremal ob-havo hodisalari – bular insoniyatning beparvoligi oqibatidir. Agar hozir harakat qilmasak, ertaga kech bo'ladi. Bizning maqsadimiz:
+                            <ul>
+                                <li>Uglerod chiqindilarini kamaytirish.</li>
+                                <li>Yashil energiya tarafdori bo'lish.</li>
+                                <li>Tabiatni asrash bo'yicha ta'limni rivojlantirish.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Ro'yxatdan o'tish qismi (CTA) -->
+                    <div class="post_box highlight_box" id="qoshilish">
+                        <div class="post_header">Ro'yxatdan O'tish - Bepul!</div>
+                        <div class="post_content">
+                            <p>Bizning safiga qo'shilish orqali siz mahalliy aksiyalarda qatnashishingiz, muhim yangiliklardan xabardor bo'lishingiz va fikrdoshlar topishingiz mumkin.</p>
+                            
+                            <form id="joinForm">
+                                <table class="form_table">
+                                    <tr>
+                                        <td class="label">Ismingiz:</td>
+                                        <td class="input"><input type="text" name="name" required></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label">Email manzilingiz:</td>
+                                        <td class="input"><input type="email" name="email" required></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label">Nima qila olasiz?:</td>
+                                        <td class="input">
+                                            <select name="skills">
+                                                <option value="ixtiyoriy">Tanlang...</option>
+                                                <option value="aktivist">Aksiya qatnashchisi</option>
+                                                <option value="dizayner">Dizayn/IT</option>
+                                                <option value="tashkilotchi">Tashkilotchi</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td class="input">
+                                            <input type="submit" value="A'zo bo'lish!" class="submit_btn">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                            <div id="successMessage" style="display: none; color: green; font-weight: bold; text-align: center; margin-top: 10px;">
+                                Rahmat! Siz muvaffaqiyatli a'zo bo'ldingiz.
+                            </div>
+                        </div>
+                    </div>
+
+                </td>
+            </tr>
+
+            <!-- Footer qismi -->
+            <tr>
+                <td class="footer" colspan="2">
+                    <div align="center">
+                        <a href="#">Haqimizda</a> | <a href="#">Qoidalar</a> | <a href="#">Aloqa</a>
+                        <br>
+                        &copy; 2005 "Iqlim" Jamoati. Bizning yerimiz, bizning javobgarlik.
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </center>
+
+    <!-- JavaScript qismi -->
+    <script>
+        document.getElementById('joinForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Sahifa yangilanmasligi uchun
+            
+            // Formani yashirish
+            document.getElementById('joinForm').style.display = 'none';
+            
+            // Muvaffaqiyat xabarini ko'rsatish
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // Statistikani soxta oshirish (realda bazaga yozilishi kerak)
+            let statEl = document.querySelector('.stat_number');
+            let currentStat = parseInt(statEl.innerText.replace(',', ''));
+            statEl.innerText = (currentStat + 1).toLocaleString('en');
+        });
+
+        // Havolalar bo'yicha sekin sirpanish (smooth scroll)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
