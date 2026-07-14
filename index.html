@@ -56,7 +56,7 @@
                     </div>
 
                     <!-- Muammo qismi -->
-                    <div class="post_box" id="muammo">
+             .       <div class="post_box" id="muammo">
                         <div class="post_header">Nima uchun kurashyapmiz?</div>
                         <div class="post_content">
                             Global isish, muzliklarning erishi, ekstremal ob-havo hodisalari – bular insoniyatning beparvoligi oqibatidir. Agar hozir harakat qilmasak, ertaga kech bo'ladi. Bizning maqsadimiz:
@@ -116,57 +116,5 @@
             </tr>
         </table>
     </center>
-
-    <!-- JavaScript qismi -->
-    <script>
-        document.getElementById('joinForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Sahifa yangilanmasligi uchun
-            
-            // Formani yashirish
-            document.getElementById('joinForm').style.display = 'none';
-            
-            // Muvaffaqiyat xabarini ko'rsatish
-            document.getElementById('successMessage').style.display = 'block';
-            
-            // Statistikani soxta oshirish (realda bazaga yozilishi kerak)
-            let statEl = document.querySelector('.stat_number');
-            let currentStat = parseInt(statEl.innerText.replace(',', ''));
-            statEl.innerText = (currentStat + 1).toLocaleString('en');
-        });
-
-        // Havolalar bo'yicha sekin sirpanish (smooth scroll)
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-
 </body>
-    <script>
-    var form = document.getElementById("my-form");
-    
-    async function handleSubmit(event) {
-        event.preventDefault();
-        var status = document.getElementById("status");
-        var data = new FormData(event.target);
-        
-        fetch(event.target.action, {
-            method: form.method,
-            body: data,
-            headers: { 'Accept': 'application/json' }
-        }).then(response => {
-            if (response.ok) {
-                form.style.display = "none"; // Formani yashiradi
-                status.style.display = "block"; // Rahmat xabarini ko'rsatadi
-            } else {
-                alert("Xatolik yuz berdi, iltimos qaytadan urinib ko'ring.");
-            }
-        });
-    }
-    form.addEventListener("submit", handleSubmit);
-</script>
 </html>
