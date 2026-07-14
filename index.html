@@ -74,35 +74,34 @@
                         <div class="post_content">
                             <p>Bizning safiga qo'shilish orqali siz mahalliy aksiyalarda qatnashishingiz, muhim yangiliklardan xabardor bo'lishingiz va fikrdoshlar topishingiz mumkin.</p>
                             
-                            <form id="joinForm">
-                                <table class="form_table">
-                                    <tr>
-                                        <td class="label">Ismingiz:</td>
-                                        <td class="input"><input type="text" name="name" required></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="label">Email manzilingiz:</td>
-                                        <td class="input"><input type="email" name="email" required></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="label">Nima qila olasiz?:</td>
-                                        <td class="input">
-                                            <select name="skills">
-                                                <option value="ixtiyoriy">Tanlang...</option>
-                                                <option value="aktivist">Aksiya qatnashchisi</option>
-                                                <option value="dizayner">Dizayn/IT</option>
-                                                <option value="tashkilotchi">Tashkilotchi</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td class="input">
-                                            <input type="submit" value="A'zo bo'lish!" class="submit_btn">
-                                        </td>
-                                    </tr>
-                                </table>
-                            </form>
+                            <form action="https://formspree.io/f/mqeraldk" method="POST">
+    <table class="form_table">
+        <tr>
+            <td class="label">Ismingiz:</td>
+            <td class="input"><input type="text" name="name" required></td>
+        </tr>
+        <tr>
+            <td class="label">Email manzilingiz:</td>
+            <td class="input"><input type="email" name="email" required></td>
+        </tr>
+        <tr>
+            <td class="label">Nima qila olasiz?:</td>
+            <td class="input">
+                <select name="skills">
+                    <option value="aktivist">Aksiya qatnashchisi</option>
+                    <option value="dizayner">Dizayn/IT</option>
+                    <option value="tashkilotchi">Tashkilotchi</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="input">
+                <input type="submit" value="A'zo bo'lish!" class="submit_btn">
+            </td>
+        </tr>
+    </table>
+</form>
                             <div id="successMessage" style="display: none; color: green; font-weight: bold; text-align: center; margin-top: 10px;">
                                 Rahmat! Siz muvaffaqiyatli a'zo bo'ldingiz.
                             </div>
